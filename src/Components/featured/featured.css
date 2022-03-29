@@ -1,0 +1,138 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 600px;
+  box-shadow: 0 5px 10px rgb(195, 195, 216);
+  width: 100%;
+  background-color: #010827;
+}
+
+.left {
+  flex: 1;
+  top: 10px;
+  right: 150px;
+  text-align: center;
+}
+
+.left h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  color: goldenrod;
+  margin-top: 120px;
+}
+
+.left img {
+  margin-top: 40px;
+  width: 350px;
+  height: 200px;
+}
+
+.srch {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.srch input {
+  outline: 0;
+  border: 0;
+  width: 350px;
+  height: 35px;
+  padding: 0 0.5rem;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.srch button {
+  outline: none;
+  border: none;
+  height: 35px;
+  padding: 0 0.5rem;
+}
+.right {
+  flex: 1;
+  position: relative;
+}
+
+.right ::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 110%;
+  height: 540%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../img/bg1.jpg);
+  background-repeat: no-repeat;
+  clip-path: circle(105% at right 300px);
+  margin-top: -240px;
+}
+
+.right h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  color: goldenrod;
+  text-align: center;
+}
+.container {
+  background-color: #001055;
+  height: inherit;
+}
+.main {
+  width: 65%;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 0.5fr));
+  grid-gap: 20px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 414px) {
+  .wrap {
+    flex-direction: column;
+  }
+  .right {
+    display: none;
+  }
+  .left h2 {
+    margin-top: 200px;
+  }
+  .main {
+    margin-left: 100px;
+  }
+}
+@media (min-width: 415px) and (max-width: 737px) {
+  .wrap {
+    height: 400px;
+  }
+  .left {
+    top: 20px;
+    right: 90px;
+    text-align: center;
+  }
+  .left h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 3rem;
+    color: goldenrod;
+    margin-top: 50px;
+  }
+  .left img {
+    margin-top: 20px;
+    width: 300px;
+    height: 150px;
+  }
+  .srch input {
+    width: 350px;
+    height: 30px;
+  }
+  .srch button {
+    height: 30px;
+  }
+  .right {
+    display: none;
+  }
+}
